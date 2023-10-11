@@ -4,20 +4,15 @@
 
 #!javascript
 
-const sentence = "The quick brown fox jumps over the lazy dog";
+// if,if-else and else statements
 
-// Regular if,else statement 
-if(sentence.length > 10){
-    console.log("A long sentence");
+const password = "password1";
+
+if(password.length > 8){
+    console.log("condition 1 : checking length of password");
+}else if(password.test(/[A-Z]/g)){
+    console.log("condition 2 : checking if contains capital letter");
 }else{
-    console.log("A short sentence");
+    // this is the last resort
+    console.log("when all condition is false 1");
 }
-
-// ternary operator if,else statement in one line
-
-console.log(
-    sentence.length > 10
-    ? 
-    "A long sentence" :
-    "A short sentence" 
-    )
