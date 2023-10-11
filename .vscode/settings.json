@@ -1,0 +1,5 @@
+{
+    "editor.fontSize": 25,
+    "eslint.format.enable": true,
+    "eslint.problems.shortenToSingleLine": true
+}

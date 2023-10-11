@@ -1,0 +1,71 @@
+#!meta
+
+{"kernelInfo":{"defaultKernelName":"javascript","items":[{"aliases":[],"languageName":"javascript","name":"javascript"}]}}
+
+#!javascript
+
+let firstName = "Sam";
+
+firstName = "Sammy";
+
+console.log(firstName);
+
+#!javascript
+
+let firstName = "Sam";
+let lastName = "Johnny";
+let email = "sam@gmail.com";
+let age = 44;
+let salary = 50.00;
+
+// Concatination
+console.log(
+    "My name is "+ firstName + " " + lastName + ", and I am " + age + " years old. " +
+    "Email me on "+ email + "." + " My salary is "+ salary + " cedis."
+)
+
+// Interpolation
+console.log(
+    `My name is ${firstName} ${lastName}, and I am ${age} years old. Email me on ${email}. My salary is ${salary} cedis.`
+)
+
+console.log(
+    age + " Hello"
+);
+
+#!javascript
+
+// multi-value variable
+
+// short method for creating an object
+let userObject = {
+    firstName: "Sam",
+    lastName: "Johnny",
+    email: "sam@gmail.com",
+    age: 44,
+    salary: 50.00
+};
+
+// This is an array
+// Start counting from 0
+// index of array is always (items number - 1)
+// Value inside of array is called an element / items
+
+// Create array - method 1
+let daysOfTheWeek = [
+    "Sunday","Monday","Tuesday", "Wednesday", "Thursday","Friday","Saturday"
+]
+
+// Counts the number of elements / items in an array
+const totalDays = daysOfTheWeek.length
+
+// Create array - method 2
+// let daysOfTheWeek = new Array();
+
+// daysOfTheWeek[0] = "Sunday";
+// // daysOfTheWeek.push("Sunday")
+
+
+console.log(
+    "Days of the week are " + daysOfTheWeek.length
+)

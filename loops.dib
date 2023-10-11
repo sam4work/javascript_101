@@ -1,0 +1,113 @@
+#!meta
+
+{"kernelInfo":{"defaultKernelName":"javascript","items":[{"aliases":[],"languageName":"javascript","name":"javascript"}]}}
+
+#!javascript
+
+const daysOfTheWeek = [
+    "Sunday", "Monday","Tuesday", "Wednesday", "Thursday","Friday","Saturday"
+];
+
+
+// While loops
+
+// let count = 0;
+
+// //  While uses a condition to execute code within curl braces
+// while(count < daysOfTheWeek.length){
+
+//     console.log( count +" "+ daysOfTheWeek[count]);
+//     count++; // adding 1 to count's existing values - method 1
+//     // count = count + 1; // adding 1 to count's existing values - method 1
+// }
+
+
+// initialize ; condition ; increment / decrement
+for(
+    let count = 0;
+    count < daysOfTheWeek.length; 
+    count++
+    ){
+    console.log( count +" "+ daysOfTheWeek[count]);
+}
+
+// daysOfTheWeek.map((day) => console.log( count +" "+ daysOfTheWeek[count]))
+
+#!javascript
+
+let weekDays = [];
+
+let weekEndDays = new Array(10)
+
+
+weekEndDays.push("Saturday");
+weekEndDays.push("Saturday");
+weekEndDays.push("Saturday");
+
+console.log(
+    weekEndDays
+);
+
+#!javascript
+
+const daysOfTheWeek = [
+    "Sunday", "Monday","Tuesday", "Wednesday", "Thursday","Friday","Saturday"
+];
+
+
+
+// daysOfTheWeek.map(function(day,index){
+//     console.log("Today is "+day + " and the element index is "+index);
+// });
+
+// const dayStartingWithT = daysOfTheWeek.map(day => {
+
+//     if(day.startsWith('T')){
+//         return day;
+//     }
+
+// });
+
+// const dayStartingWithT = daysOfTheWeek.filter(day => !day.startsWith('T'));
+
+// console.log(dayStartingWithT);
+
+
+
+const numbers1 = [4,6,3];
+
+console.log(
+     numbers1.reduce((a,b) => a * b)
+);
+
+let count = 0;
+
+do{
+console.log("Starting ");
+console.log(numbers1[count] + " * " + count + " = "+ (numbers1[count] * count));
+count++;
+
+}while(count < numbers1.length)
+
+
+(
+   () =>  console.log("Anonymous functions")
+)
+();
+
+#!javascript
+
+const daysOfTheWeek = [
+    "Sunday", "Monday","Tuesday", "Wednesday", "Thursday","Friday","Saturday"
+];
+
+
+console.log(
+    daysOfTheWeek.filter(function(day){
+        return day.includes("s");
+    })
+)
+
+console.log(
+    daysOfTheWeek.filter(day => day.includes("s"))
+)

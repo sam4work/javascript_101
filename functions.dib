@@ -1,0 +1,59 @@
+#!meta
+
+{"kernelInfo":{"defaultKernelName":"javascript","items":[{"aliases":[],"languageName":"javascript","name":"javascript"}]}}
+
+#!javascript
+
+// Function signature
+// arguments vs Parameters
+// Callbacks and closure
+// Scope variables in functions
+
+
+
+
+// function getFullName(firstName,lastName){
+//     return firstName + " " + lastName
+// }
+
+
+// function getFullName(names){
+//     return names.join(" ");
+// }
+
+
+function getFullName(firstName,lastName,...rest){
+    // return firstName + " "+ lastName
+    return rest
+}
+
+
+// const getFullName = function(firstName,lastName){
+//     return firstName + " " + lastName
+// }
+
+// const getFullName = (firstName,lastName) =>  (firstName + " " + lastName);
+
+const users = [
+    {
+        firstName: "Hindolo",
+        lastName: "Sam"
+    },
+    {
+        firstName: "John",
+        lastName: "Doe"
+    },
+]
+
+
+// console.log(
+//     users.map(user => getFullName( user.firstName,user.lastName))
+// )
+
+// console.log(
+//     users[0].firstName
+// );
+
+console.log(
+    getFullName("Hindolo","B","S","A","Sam","fiuhyfiuhf")
+)
