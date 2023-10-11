@@ -34,8 +34,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const playerSelection = document.getElementById("players");
 
+        // reset the player element dropdown when you change a team
+        playerSelection.innerHTML = null
+
+        // squads[e.target.value] might not work in typescript
+
         if (squads[e.target.value].length > 0) {
-            console.log(squads[e.target.value])
 
             squads[e.target.value].map(player => {
                 // create an option element
@@ -47,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 // set inner text for option element
                 option.textContent = player.toUpperCase();
 
-                // add option element as child to the team select element
+                // add option element as child to the player select element
                 playerSelection.appendChild(
                     option
                 )
