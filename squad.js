@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
 
     const squads = {
-        chelsea : ["jackson","essien","drogba"],
-        roma : ["lukaku","dybala","pellegrini"],
-        interMilan : ["thuram","bastoni","barela"],
+        chelsea: ["jackson", "essien", "drogba"],
+        roma: ["lukaku", "dybala", "pellegrini"],
+        interMilan: ["thuram", "bastoni", "barela"],
     }
 
 
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
         let option = document.createElement('option');
 
         // set option element value
-        option.value = team.toLowerCase();
+        option.value = team;
 
         // set inner text for option element
         option.textContent = team.toUpperCase();
@@ -26,7 +26,37 @@ document.addEventListener("DOMContentLoaded", () => {
         teamSelection.appendChild(
             option
         )
-        
+
+    })
+
+
+    teamSelection.addEventListener("change", (e) => {
+
+        const playerSelection = document.getElementById("players");
+
+        if (squads[e.target.value].length > 0) {
+            console.log(squads[e.target.value])
+
+            squads[e.target.value].map(player => {
+                // create an option element
+                let option = document.createElement('option');
+
+                // set option element value
+                option.value = player;
+
+                // set inner text for option element
+                option.textContent = player.toUpperCase();
+
+                // add option element as child to the team select element
+                playerSelection.appendChild(
+                    option
+                )
+            })
+
+
+        }
+
+
     })
 
 
