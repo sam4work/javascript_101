@@ -6,6 +6,13 @@ document.addEventListener("DOMContentLoaded", () => {
         interMilan: ["thuram", "bastoni", "barela"],
     }
 
+    const createSelectOption = (value, text) => {
+        let option = document.createElement('option');
+        option.value = value;
+        option.textContent = text
+        return option;
+    }
+
 
     // get the empty select element on the page
     const teamSelection = document.getElementById("teams")
@@ -13,20 +20,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // get the object keys of the squads object variable
     // and loop over each each
     Object.keys(squads).map(team => {
-        // create an option element
-        let option = document.createElement('option');
-
-        // set option element value
-        option.value = team;
-
-        // set inner text for option element
-        option.textContent = team.toUpperCase();
-
-        // add option element as child to the team select element
         teamSelection.appendChild(
-            option
+            createSelectOption(team,team.toUpperCase())
         )
-
     })
 
 
@@ -36,6 +32,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // reset the player element dropdown when you change a team
         playerSelection.innerHTML = null
+        playerSelection.appendChild(
+            createSelectOption("","Select a player")
+        )
 
         // squads[e.target.value] might not work in typescript
 
@@ -43,17 +42,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
             squads[e.target.value].map(player => {
                 // create an option element
-                let option = document.createElement('option');
+                // let option = document.createElement('option');
 
                 // set option element value
-                option.value = player;
+                // option.value = player;
 
                 // set inner text for option element
-                option.textContent = player.toUpperCase();
+                // option.textContent = player.toUpperCase();
 
                 // add option element as child to the player select element
                 playerSelection.appendChild(
-                    option
+                    createSelectOption(player,player.toUpperCase())
                 )
             })
 
@@ -62,6 +61,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     })
+
+    
 
 
 
