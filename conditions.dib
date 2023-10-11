@@ -1,11 +1,23 @@
 #!meta
 
-{"kernelInfo":{"defaultKernelName":"javascript","items":[{"aliases":[],"languageName":"javascript","name":"javascript"}]}}
+{"kernelInfo":{"defaultKernelName":"csharp","items":[{"aliases":[],"name":"csharp"},{"aliases":[],"languageName":"javascript","name":"javascript"}]}}
 
 #!javascript
 
 const sentence = "The quick brown fox jumps over the lazy dog";
 
+// Regular if,else statement 
 if(sentence.length > 10){
     console.log("A long sentence");
+}else{
+    console.log("A short sentence");
 }
+
+// ternary operator if,else statement in one line
+
+console.log(
+    sentence.length > 10
+    ? 
+    "A long sentence" :
+    "A short sentence" 
+    )
