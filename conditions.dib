@@ -1,0 +1,11 @@
+#!meta
+
+{"kernelInfo":{"defaultKernelName":"javascript","items":[{"aliases":[],"languageName":"javascript","name":"javascript"}]}}
+
+#!javascript
+
+const sentence = "The quick brown fox jumps over the lazy dog";
+
+if(sentence.length > 10){
+    console.log("A long sentence");
+}

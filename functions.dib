@@ -6,10 +6,8 @@
 
 // Function signature
 // arguments vs Parameters
-// Callbacks and closure
+// Callbacks lsand closure
 // Scope variables in functions
-
-
 
 
 // function getFullName(firstName,lastName){
