@@ -1,6 +1,29 @@
 const showAlert = (e) => {
 
-    console.log(e.target.innerText)
+    const element = e.target;
+
+    const pageWrapper = document.getElementById("wrapper");
+
+    for (const childElement of pageWrapper.children) {
+        childElement.style.color = "black";
+        childElement.style.textDecoration = "none";
+    }
+
+    element.style.color = "red";
+    element.style.textDecoration = "underline";
+
+
+
+
+
+    // if(element.style.color === "red"){
+    //     element.style.color = "black";
+    // }else{
+    //     element.style.color = "red";
+    // }
+
+    // element.style.color = "red";
+    // element.style.textDecoration = "underline";
     // alert("Hello")
 }
 
@@ -12,21 +35,21 @@ document.addEventListener("DOMContentLoaded", () => {
     // document.getElementsByTagName(); look the html tag name
 
     // return HTML collection
-// const entireBody = document.getElementsByTagName("body"); 
+    // const entireBody = document.getElementsByTagName("body"); 
 
-// const allHTags = document.getElementsByTagName("h1");
+    // const allHTags = document.getElementsByTagName("h1");
 
-const pageWrapper = document.getElementById("wrapper");
+    const pageWrapper = document.getElementById("wrapper");
 
-// console.log(entireBody);
-// console.log(allHTags);
-// console.log(pageWrapper.children);
+    // console.log(entireBody);
+    // console.log(allHTags);
+    // console.log(pageWrapper.children);
 
 
 
-for (const childElement of pageWrapper.children) {
-    childElement.addEventListener("click", showAlert);
-  }
+    for (const childElement of pageWrapper.children) {
+        childElement.addEventListener("click", showAlert);
+    }
 
 
 
