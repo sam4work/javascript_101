@@ -5,9 +5,20 @@ document.addEventListener("DOMContentLoaded", () => {
     // document.getElementsByName(); look for name attribute
     // document.getElementsByTagName(); look the html tag name
 
-const entireBody = document.getElementsByTagName("body");
+    // return HTML collection
+// const entireBody = document.getElementsByTagName("body"); 
 
-console.log(entireBody);
+// const allHTags = document.getElementsByTagName("h1");
+
+const pageWrapper = document.getElementById("wrapper");
+
+// console.log(entireBody);
+// console.log(allHTags);
+// console.log(pageWrapper.children);
+
+for (const childElement of pageWrapper.children) {
+    console.log(childElement);
+  }
 
 
 });
