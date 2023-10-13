@@ -1,3 +1,9 @@
+const showAlert = (e) => {
+
+    console.log(e.target.innerText)
+    // alert("Hello")
+}
+
 document.addEventListener("DOMContentLoaded", () => {
 
     // document.getElementById(); look for id attribute
@@ -16,9 +22,12 @@ const pageWrapper = document.getElementById("wrapper");
 // console.log(allHTags);
 // console.log(pageWrapper.children);
 
+
+
 for (const childElement of pageWrapper.children) {
-    console.log(childElement);
+    childElement.addEventListener("click", showAlert);
   }
+
 
 
 });
