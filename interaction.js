@@ -11,20 +11,40 @@ const showAlert = (e) => {
 
     element.style.color = "red";
     element.style.textDecoration = "underline";
+}
 
+const pageWrapper = document.getElementById("wrapper");
 
+const changeTeamTag = (e) => {
 
+    const element = e.target;
 
+    console.log(
+        changeTeamTag.prevText
+    )
+    console.log(
+        changeTeamTag.prevElement
+    )
 
-    // if(element.style.color === "red"){
-    //     element.style.color = "black";
-    // }else{
-    //     element.style.color = "red";
+    // console.log(
+    //     pageWrapper.children[0]
+    // )
+
+    // for(let i = 0; i < pageWrapper.children.length; i++){
+    //     pageWrapper.children[i].textContent = changeTeamTag.prevText;
     // }
+
+    // for (const childElement of pageWrapper.children) {
+    //     childElement.style.color = "black";
+    //     childElement.style.textDecoration = "none";
+    //     // childElement.textContent = changeTeamTag.prevElement.textContent
+    // }
+
+
 
     // element.style.color = "red";
     // element.style.textDecoration = "underline";
-    // alert("Hello")
+    // element.textContent = "success"
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -39,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // const allHTags = document.getElementsByTagName("h1");
 
-    const pageWrapper = document.getElementById("wrapper");
+    // const pageWrapper = document.getElementById("wrapper");
 
     // console.log(entireBody);
     // console.log(allHTags);
@@ -48,7 +68,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     for (const childElement of pageWrapper.children) {
-        childElement.addEventListener("click", showAlert);
+        
+        childElement.addEventListener("click", changeTeamTag);
     }
 
 
