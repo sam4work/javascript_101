@@ -2,7 +2,7 @@
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    console.log("Hello");
+    const factContent = document.getElementById("fact");
 
     // Promise / resolve
     fetch(
@@ -13,18 +13,22 @@ document.addEventListener("DOMContentLoaded", function () {
                 'accept': 'application/json',
                 'X-CSRF-TOKEN': 'HbY92a2aiPbC4i7vUs9K1CKjNY7LmK5llmlBFvUE'
             } // request header that help describe request to server
-        }).then(res => {
+        })
+        .then(res => {
             // will run if successful and create a promise
             console.log(res);
             return res.json();
-        }).then(res => {
+        })
+        .then(res => {
             // will run if successful and resolve the promise
             console.log(res);
-        }).
-        catch(err => {
+            factContent.textContent = res.fact;
+        })
+        .catch(err => {
             // will run if unsuccessful/ error in request
-            console.error(err);
-        }).finally(() => {
+            console.log(err);
+        })
+        .finally(() => {
             // will run if whether successful / error in request
             console.log("i will always run with or without error")
         });
