@@ -43,7 +43,40 @@ const user1 = new User("John","Doe",'m');
 
 // Assign value to property firstName of class User
 // user1.firstName = "John";
-// user1.lastName = "Doe";
+
 
 
 user1.checkGender();
+
+#!javascript
+
+class Person {
+    firstName;
+    lastName;
+    gender;
+
+    constructor(){
+
+    }
+
+    fullName(){
+        console.log(`${this.firstName} ${this.lastName} ${this.gender}`);
+    }
+}
+
+// Inheritance
+class User extends Person {
+    
+    constructor(firstName,lastName,gender){
+        super(); // run the parent constructor method
+
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.gender = gender;
+    }
+
+}
+
+const user1 = new User("Hindolo","Sam","m");
+
+user1.fullName();
