@@ -1,0 +1,49 @@
+#!meta
+
+{"kernelInfo":{"defaultKernelName":"javascript","items":[{"aliases":[],"languageName":"javascript","name":"javascript"}]}}
+
+#!javascript
+
+// Define a class
+class User {
+    firstName;
+    lastName;
+    gender;
+
+    constructor(firstName,lastName,gender){
+         this.firstName = firstName;
+         this.lastName = lastName;
+         this.gender = gender;
+     }
+
+    fullName(){
+        console.log(`${this.firstName} ${this.lastName}`);
+    }
+
+    checkGender(){
+     
+        switch(this.gender){
+            case 'm':
+                console.log(this.firstName + " is a male");
+            break;
+            case 'f':
+                console.log(this.firstName + " is a female");
+            break;
+            default:
+                console.log("Gender is unknown");
+            break;
+        }
+    }
+
+
+}
+
+// Instantiate a class
+const user1 = new User("John","Doe",'m');
+
+// Assign value to property firstName of class User
+// user1.firstName = "John";
+// user1.lastName = "Doe";
+
+
+user1.checkGender();
