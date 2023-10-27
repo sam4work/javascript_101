@@ -18,7 +18,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 const errorField = document.querySelector(`#${field}-error-message`);
                 errorField.textContent = `${field} is required`;
                 errorField.style.color = 'red';
-
+                errorField.style.fontSize = '8px';
+                document.querySelector(`[name=${field}]`).style.border = '1px solid red';
                 break;
             }
         }
