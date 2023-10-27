@@ -11,7 +11,7 @@ class User {
    login(username,password){
 
        console.log("you are about to login");
-       return false
+       return false;
    }
 
 
@@ -34,6 +34,10 @@ class Student extends User{
        console.log("Provide student id");
        console.log("Student is about to login ");
 
+       if(studentId === '1234' && password === 'password'){
+        return true
+       }
+
        return false;
    }
 }
@@ -42,4 +46,7 @@ class Student extends User{
 const employee1 = new Employee();
 
 
-employee1.login('sam4work','password');
+if(employee1.login('sam4work','password')){
+
+    console.log("redirect to dashboard")
+}
