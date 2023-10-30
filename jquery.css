@@ -1,0 +1,35 @@
+body{
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    /* height: 100svh; */
+    /* background-color: yellow; */
+}
+
+#uploadForm{
+background-color: red;
+width: 25%;
+padding: 10px;
+/* height: min-content; */
+}
+
+#image-container{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    margin: 0 auto;
+    background-color: gray;
+    background-position: center;
+    background-size: cover;
+}
+
+input[name='upload-input']{
+    display: none;
+}
+
+#btn-upload{
+    text-align: center;
+    display: block;
+    margin: 10px auto;
+    
+}
