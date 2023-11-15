@@ -10,13 +10,29 @@ document.addEventListener("DOMContentLoaded", function () {
             const htmlClassList = document.documentElement.classList;
 
             // if dark mode is on, remove it from class list
-            if(htmlClassList.contains('dark')){
-                htmlClassList.remove('dark')
-                this.textContent = 'light';
-            }else{
-                htmlClassList.add('dark')
-                this.textContent = 'dark';
 
+            // if(htmlClassList.contains('dark')){
+            //     htmlClassList.remove('dark')
+            //     this.textContent = 'light';
+            // }else{
+            //     htmlClassList.add('dark')
+            //     this.textContent = 'dark';
+
+            // }
+
+            // same as condition above but using switch statement
+            switch (htmlClassList.contains('dark')) {
+                case true:
+                    htmlClassList.remove('dark')
+                    this.textContent = 'light';
+                    break;
+            
+                case false:
+                    htmlClassList.add('dark')
+                    this.textContent = 'dark';
+                    break;
+                default:
+                    break;
             }
         })
 
