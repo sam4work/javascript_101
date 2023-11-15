@@ -6,10 +6,10 @@ $(document).ready(function () {
     ;
 
     // loop through them an append each to ul 
-
     existingTodos.forEach(todo => {
         $("#todoBox").append(`<li>${todo.title}</li>`);
     });
+
 
 
     $("#todoForm").submit(function (e) {
@@ -32,18 +32,25 @@ $(document).ready(function () {
             completed: false,
         }]
 
-        let allTodos = [];
+        // let allTodos = [];
 
-        if (!oldTodos) {
-            allTodos = [
-                ...newTodo
+        const allTodos = 
+            !oldTodos ? [...newTodo] : [
+                ...newTodo,
+                ...JSON.parse(oldTodos)
             ]
-        } else {
-            allTodos = [
-                ...JSON.parse(oldTodos),
-                ...newTodo
-            ]
-        }
+        
+
+        // if (!oldTodos) {
+        //     allTodos = [
+        //         ...newTodo
+        //     ]
+        // } else {
+        //     allTodos = [
+        //         ...JSON.parse(oldTodos),
+        //         ...newTodo
+        //     ]
+        // }
 
         console.log(allTodos);
         console.log(JSON.stringify(allTodos));
