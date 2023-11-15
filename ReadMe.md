@@ -2,7 +2,7 @@
 
 - Variable Scope
 - DOM interaction
-- Conditions*
+- Conditions 
 - Loops & Iterations
 - Functions
 - Promises & Asyncronous Execution
@@ -11,6 +11,7 @@
 - Import & export modules
 - Script Defer & Async
 
-- Typescript
-- Build & Compilling JS
+- Typescript - (Statically Types vs Dynamically Typed)
 - Data Structures
+- Build, Bundles & Compilling JS
+
