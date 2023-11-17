@@ -1,4 +1,3 @@
-
 class Student {
 
     // public Can use in this and all child class
@@ -10,7 +9,6 @@ class Student {
     public firstName: string;
     public lastName: string;
 
-    
     private _accountNumber : string;
 
     public get accountNumber() : string {
@@ -21,8 +19,9 @@ class Student {
         this._accountNumber = v;
     }
     
-
 }
+
+
 
 
 const student = new Student();
